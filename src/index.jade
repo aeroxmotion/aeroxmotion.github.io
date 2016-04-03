@@ -1,0 +1,108 @@
+//
+   *________________     ________________     ________________     ________________
+   |\      _____    \   |\    ___________\   |\      _____    \   |\               \
+   \ \     \___/\    \  \ \   \__________/   \ \     \___/\    \  \ \     ______    \
+    \ \     \__\_\    \  \ \   \____________  \ \     \__\_\   _\  \ \    \____/\    \
+     \ \               \  \ \    ___________\  \ \            /_/_  \ \    \   \ \    \
+      \ \     ______    \  \ \   \__________/   \ \     ______    \  \ \    \___\_\    \
+       \ \    \____/\    \  \ \   \____________  \ \    \____/\    \  \ \               \
+        \ \____\   \ \____\  \ \_______________\  \ \____\   \ \____\  \ \_______________\
+         \|____/    \|____/   \|_______________/   \|____/    \|____/   \|_______________/
+
+                                   M o t i o n      D e s i g n
+
+                                  Copyright (c) 2016 AeroXMotion
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Aero Motion Design | Web development
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+    //- Metas
+    meta(name="author", content="AeroXMotion")
+    meta(name="description", content="Motion design; the elegance")
+    meta(name="keywords", content="Motion, Designer, Web, Development")
+
+    //- Preloader
+    style
+      :stylus
+        .Preloader
+          position fixed
+          top 0
+          right 0
+          bottom 0
+          left 0
+          background #111
+          z-index 10000
+          -webkit-transition all .5s linear
+          transition all .5s linear
+
+          &.is-hide
+            opacity 0
+
+          &-loading
+            position absolute
+            top 50%
+            left 50%
+            width 50px
+            height @width
+            margin-left unit(-@width / 2, 'px')
+            margin-top @margin-left
+
+            &-circle
+              position absolute
+              top 0
+              right 0
+              bottom 0
+              left 0
+              border-radius 50%
+              border 2px solid #fff
+              -webkit-animation scale 1.5s ease-out infinite both
+              animation scale 1.5s ease-out infinite both
+
+              &:nth-child(2)
+                -webkit-animation-delay -0.75s
+                animation-delay -0.75s
+
+        @keyframes scale
+          0%
+            -webkit-transform scale(0)
+            transform scale(0)
+            opacity 0
+
+          5%
+            opacity 1
+
+          100%
+            -webkit-transform scale(1)
+            transform scale(1)
+            opacity 0
+
+    //- Stylesheets
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poiret+One")
+    link(rel="stylesheet", href="./dist/stylesheets/styles.css")
+  body.Page
+    .Preloader#preloader
+      .Preloader-loading
+        .Preloader-loading-circle
+        .Preloader-loading-circle
+
+    main.Profile
+      h1.Profile-title Aero
+      h2.Profile-subtitle Motion Design
+      p.Profile-description Web development
+      ul.Profile-social
+        - var socialLinks = {}
+        - socialLinks.facebook = { title: 'Like me on Facebook', href: 'https://www.facebook.com/aeromotiondesign' }
+        - socialLinks.twitter = { title: 'Follow me on Twitter', href: 'https://twitter.com/aeromdesign' }
+        - socialLinks.github = { title: 'See my projects on Github', href: 'https://github.com/aeroxmotion' }
+        - socialLinks.email = { title: 'Contact me (business)', href: 'mailto:aeroxmotion@hotmail.com' }
+        - each val, key in socialLinks
+          li.Profile-social-item
+            a.Profile-social-item-link.Tooltip(data-title=val.title, href=val.href, target="_blank")
+              i(class="icon icon-" + key)
+
+    //- Javascripts
+    script(src="./dist/javascripts/config.js")

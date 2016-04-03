@@ -1,0 +1,118 @@
+.Modal
+  display flex
+  justify-content center
+  align-items center
+  padding 1em
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-color rgba(#282828, .8)
+  transition all .3s ease
+
+  &.is-hide
+    opacity 0
+    visibility hidden
+
+    .Modal-content
+      transform scale(.8)
+
+  &-content
+    position relative
+    width 100%
+    max-width 800px
+    color #333
+    padding 3em
+    background-color #fff
+    transform scale(1)
+    transition all .3s ease
+
+    &:before
+      content ''
+      position absolute
+      top 1em
+      right @top
+      bottom @top
+      left @top
+      border 1px solid #ccc
+
+  &-close
+    position absolute
+    top 0
+    right 0
+    background-color #333
+    padding .2em .4em
+    color #fff
+    font-size 1.25em
+    border 0
+    cursor pointer
+    outline 0
+
+  &-form
+    position relative
+    color #555
+
+    &-title
+      font-size 1.8em
+      text-align center
+      margin-bottom 1.25em
+
+    &-label
+    &-input
+    &-textarea
+    &-btn
+      display block
+      width 100%
+
+    &-input
+    &-textarea
+      font-family inherit
+      font-weight 600
+      font-size .9em
+      letter-spacing 1px
+      color #111
+      background-color #fff
+      padding .75em
+      border 1px solid #ccc
+      outline 0
+
+    &-label
+      font-size 1em
+      font-weight 600
+      margin-bottom .5em
+
+    &-textarea
+      height 8em
+      resize none
+
+    &-countdownChars
+      position absolute
+      top .2em
+      right 0
+      font-size .8em
+      font-weight 600
+      letter-spacing .25em
+
+    &-btn
+      border 1px solid #ccc
+      background-color #333
+      color #fff
+      font-family inherit
+      font-weight 900
+      font-size .9em
+      letter-spacing .5em
+      padding 1em
+      text-transform uppercase
+      cursor pointer
+      transition all .3s ease
+      outline 0
+
+      &:hover
+        background-color #fff
+        color #333
+
+      &:hover:disabled
+        background-color #333
+        color #fff
+        cursor default

@@ -1,0 +1,333 @@
+/**
+ *   ________________     ________________     ________________     ________________
+ *  |\      _____    \   |\    ___________\   |\      _____    \   |\               \ *  \ \     \___/\    \  \ \   \__________/   \ \     \___/\    \  \ \     ______    \ *   \ \     \__\_\    \  \ \   \____________  \ \     \__\_\   _\  \ \    \____/\    \ *    \ \               \  \ \    ___________\  \ \            /_/_  \ \    \   \ \    \ *     \ \     ______    \  \ \   \__________/   \ \     ______    \  \ \    \___\_\    \ *      \ \    \____/\    \  \ \   \____________  \ \    \____/\    \  \ \               \ *       \ \____\   \ \____\  \ \_______________\  \ \____\   \ \____\  \ \_______________\ *        \|____/    \|____/   \|_______________/   \|____/    \|____/   \|_______________/
+ *
+ *                                  M o t i o n      D e s i g n
+ *
+ *                                 Copyright (c) 2016 AeroXMotion
+ */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?49kf2w");
+  src: url("../fonts/icomoon.eot?49kf2w#iefix") format('embedded-opentype'), url("../fonts/icomoon.ttf?49kf2w") format('truetype'), url("../fonts/icomoon.woff?49kf2w") format('woff'), url("../fonts/icomoon.svg?49kf2w#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-github:before {
+  content: "\f113";
+}
+.icon-email:before {
+  content: "\f0e0";
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+.Page {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  padding: 15px;
+  background: url("../images/background.jpg");
+  background-size: cover;
+  color: #fff;
+  font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+@media only screen and (max-width: 1024px) {
+  .Page {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .Page {
+    font-size: 14px;
+  }
+}
+.Page:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(40,40,40,0.7);
+}
+.ParticlesJS {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.Profile {
+  position: relative;
+  text-align: center;
+}
+.Profile-title,
+.Profile-subtitle {
+  line-height: 1;
+  text-transform: uppercase;
+}
+.Profile-title {
+  margin-bottom: 0.1em;
+  font-size: 6.5em;
+  font-weight: 100;
+}
+.Profile-subtitle {
+  position: relative;
+  font-size: 1.3em;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+}
+.Profile-subtitle:after {
+  content: '';
+  position: absolute;
+  left: 15%;
+  bottom: -0.75em;
+  width: 70%;
+  height: 1px;
+  background: #fff;
+}
+.Profile-description {
+  margin-top: 2em;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+.Profile-social {
+  margin-top: 2em;
+}
+.Profile-social-item {
+  display: inline-block;
+  margin: 0 1em;
+}
+.Profile-social-item-link {
+  color: inherit;
+  font-size: 1.2em;
+}
+.Tooltip {
+  position: relative;
+}
+.Tooltip:before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 100%);
+      -ms-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  padding: 0.7em;
+  background-color: rgba(40,40,40,0.8);
+  color: rgba(238,238,238,0.9);
+  font-size: 0.8em;
+  white-space: nowrap;
+  letter-spacing: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease-in-out;
+}
+.Tooltip:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+.u-inputGroup {
+  position: relative;
+  margin-bottom: 1.5em;
+}
+.u-inputGroup:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.u-inputInline {
+  float: left;
+  width: 50%;
+}
+.u-inputInline:first-child {
+  padding-right: 0.25em;
+}
+.u-inputInline:last-child {
+  padding-left: 0.25em;
+}
+.Modal {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40,40,40,0.8);
+  transition: all 0.3s ease;
+}
+.Modal.is-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.Modal.is-hide .Modal-content {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.Modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  color: #333;
+  padding: 3em;
+  background-color: #fff;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  transition: all 0.3s ease;
+}
+.Modal-content:before {
+  content: '';
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  bottom: 1em;
+  left: 1em;
+  border: 1px solid #ccc;
+}
+.Modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  padding: 0.2em 0.4em;
+  color: #fff;
+  font-size: 1.25em;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+}
+.Modal-form {
+  position: relative;
+  color: #555;
+}
+.Modal-form-title {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+.Modal-form-label,
+.Modal-form-input,
+.Modal-form-textarea,
+.Modal-form-btn {
+  display: block;
+  width: 100%;
+}
+.Modal-form-input,
+.Modal-form-textarea {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  color: #111;
+  background-color: #fff;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  outline: 0;
+}
+.Modal-form-label {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.Modal-form-textarea {
+  height: 8em;
+  resize: none;
+}
+.Modal-form-countdownChars {
+  position: absolute;
+  top: 0.2em;
+  right: 0;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+}
+.Modal-form-btn {
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 0.9em;
+  letter-spacing: 0.5em;
+  padding: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: 0;
+}
+.Modal-form-btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+.Modal-form-btn:hover:disabled {
+  background-color: #333;
+  color: #fff;
+  cursor: default;
+}
