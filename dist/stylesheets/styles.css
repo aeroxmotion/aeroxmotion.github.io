@@ -106,13 +106,6 @@ a:hover {
   left: 0;
   background: rgba(40,40,40,0.7);
 }
-.ParticlesJS {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 .Profile {
   position: relative;
   text-align: center;
@@ -132,6 +125,7 @@ a:hover {
   font-size: 1.3em;
   font-weight: 300;
   letter-spacing: 0.4em;
+  white-space: nowrap;
 }
 .Profile-subtitle:after {
   content: '';
@@ -182,152 +176,4 @@ a:hover {
 .Tooltip:hover:before {
   opacity: 1;
   visibility: visible;
-}
-.u-inputGroup {
-  position: relative;
-  margin-bottom: 1.5em;
-}
-.u-inputGroup:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.u-inputInline {
-  float: left;
-  width: 50%;
-}
-.u-inputInline:first-child {
-  padding-right: 0.25em;
-}
-.u-inputInline:last-child {
-  padding-left: 0.25em;
-}
-.Modal {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(40,40,40,0.8);
-  transition: all 0.3s ease;
-}
-.Modal.is-hide {
-  opacity: 0;
-  visibility: hidden;
-}
-.Modal.is-hide .Modal-content {
-  -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-          transform: scale(0.8);
-}
-.Modal-content {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  color: #333;
-  padding: 3em;
-  background-color: #fff;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  transition: all 0.3s ease;
-}
-.Modal-content:before {
-  content: '';
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  bottom: 1em;
-  left: 1em;
-  border: 1px solid #ccc;
-}
-.Modal-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #333;
-  padding: 0.2em 0.4em;
-  color: #fff;
-  font-size: 1.25em;
-  border: 0;
-  cursor: pointer;
-  outline: 0;
-}
-.Modal-form {
-  position: relative;
-  color: #555;
-}
-.Modal-form-title {
-  font-size: 1.8em;
-  text-align: center;
-  margin-bottom: 1.25em;
-}
-.Modal-form-label,
-.Modal-form-input,
-.Modal-form-textarea,
-.Modal-form-btn {
-  display: block;
-  width: 100%;
-}
-.Modal-form-input,
-.Modal-form-textarea {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 0.9em;
-  letter-spacing: 1px;
-  color: #111;
-  background-color: #fff;
-  padding: 0.75em;
-  border: 1px solid #ccc;
-  outline: 0;
-}
-.Modal-form-label {
-  font-size: 1em;
-  font-weight: 600;
-  margin-bottom: 0.5em;
-}
-.Modal-form-textarea {
-  height: 8em;
-  resize: none;
-}
-.Modal-form-countdownChars {
-  position: absolute;
-  top: 0.2em;
-  right: 0;
-  font-size: 0.8em;
-  font-weight: 600;
-  letter-spacing: 0.25em;
-}
-.Modal-form-btn {
-  border: 1px solid #ccc;
-  background-color: #333;
-  color: #fff;
-  font-family: inherit;
-  font-weight: 900;
-  font-size: 0.9em;
-  letter-spacing: 0.5em;
-  padding: 1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: 0;
-}
-.Modal-form-btn:hover {
-  background-color: #fff;
-  color: #333;
-}
-.Modal-form-btn:hover:disabled {
-  background-color: #333;
-  color: #fff;
-  cursor: default;
 }
