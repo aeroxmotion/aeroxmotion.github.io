@@ -141,14 +141,14 @@ a:hover {
   font-size: 1.1em;
   letter-spacing: 1px;
 }
-.Profile-social {
+.SocialList {
   margin-top: 2em;
 }
-.Profile-social-item {
+.SocialList-item {
   display: inline-block;
   margin: 0 1em;
 }
-.Profile-social-item-link {
+.SocialList-item-link {
   color: inherit;
   font-size: 1.2em;
 }

@@ -93,15 +93,15 @@ html(lang="en")
       h1.Profile-title Aero
       h2.Profile-subtitle Motion Design
       p.Profile-description Web development
-      ul.Profile-social
+      ul.SocialList
         - var socialLinks = {}
         - socialLinks.facebook = { title: 'Like me on Facebook', href: 'https://www.facebook.com/aeromotiondesign' }
         - socialLinks.twitter = { title: 'Follow me on Twitter', href: 'https://twitter.com/aeromdesign' }
         - socialLinks.github = { title: 'See my projects on Github', href: 'https://github.com/aeroxmotion' }
         - socialLinks.email = { title: 'Contact me (business)', href: 'mailto:aeroxmotion@hotmail.com' }
         - each val, key in socialLinks
-          li.Profile-social-item
-            a.Profile-social-item-link.Tooltip(data-title=val.title, href=val.href, target="_blank")
+          li.SocialList-item
+            a.SocialList-item-link.Tooltip(data-title=val.title, href=val.href, target="_blank")
               i(class="icon icon-" + key)
 
     //- Javascripts
