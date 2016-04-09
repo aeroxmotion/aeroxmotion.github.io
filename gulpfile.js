@@ -1,8 +1,8 @@
 var autoprefixer = require('autoprefixer-stylus'),
 		gulp         = require('gulp'),
 		coffee       = require('gulp-coffee'),
-		jade         = require('gulp-jade'),
 		stylus       = require('gulp-stylus'),
+		jade         = require('gulp-jade'),
 		connect      = require('gulp-connect');
 
 var config = {
