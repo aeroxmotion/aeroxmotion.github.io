@@ -1,11 +1,18 @@
 var autoprefixer = require('autoprefixer-stylus'),
 		gulp         = require('gulp'),
+		tinypng			 = require('gulp-tinypng'),
 		coffee       = require('gulp-coffee'),
 		stylus       = require('gulp-stylus'),
 		jade         = require('gulp-jade'),
 		connect      = require('gulp-connect');
 
 var config = {
+	images: {
+		key: 'API_KEY',
+		src: './src/images/background.{jpg,jpeg}',
+		dest: './dist/images'
+	},
+
 	coffee: {
 		src: './src/coffee/config.coffee',
 		dest: './dist/javascripts'
@@ -22,6 +29,12 @@ var config = {
 		dest: './'
 	}
 };
+
+gulp.task('images', function() {
+	gulp.src(config.images.src)
+		.pipe(tinypng(config.images.key))
+		.pipe(gulp.dest(config.images.dest));
+});
 
 gulp.task('coffee', function() {
 	gulp.src(config.coffee.src)
@@ -61,4 +74,4 @@ gulp.task('serve', function() {
 	});
 });
 
-gulp.task('default', ['serve', 'coffee', 'stylus', 'jade', 'watch']);
+gulp.task('default', ['serve', 'images', 'coffee', 'stylus', 'jade', 'watch']);
