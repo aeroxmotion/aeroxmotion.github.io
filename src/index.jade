@@ -26,60 +26,73 @@ html(lang="en")
     meta(name="keywords", content="Motion, Designer, Web, Development")
 
     //- Preloader
-    style
-      :stylus
-        .Preloader
-          position fixed
-          top 0
-          right 0
-          bottom 0
-          left 0
-          background-color #111
-          z-index 10000
-          -webkit-transition all .5s linear
-          transition all .5s linear
+    style.
+      .Preloader {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #111;
+        z-index: 10000;
+        -webkit-transition: all .5s linear;
+                transition: all .5s linear; }
 
-          &.is-hide
-            opacity 0
-            visibility hidden
+      .Preloader.is-hide {
+        opacity: 0;
+        visibility: hidden; }
 
-          &-loading
-            position absolute
-            top 50%
-            left 50%
-            width 50px
-            height @width
-            margin-left unit(-@height / 2, 'px')
-            margin-top unit(-@width / 2, 'px')
+      .Preloader-loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        margin-top: -25px; }
 
-            &-circle
-              position absolute
-              top 0
-              right 0
-              bottom 0
-              left 0
-              border-radius 50%
-              border 2px solid #fff
-              -webkit-animation scale 1.5s ease-out infinite both
-              animation scale 1.5s ease-out infinite both
+      .Preloader-loading-circle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        -webkit-animation: scale 1.5s ease-out infinite both;
+                animation: scale 1.5s ease-out infinite both; }
 
-              &:nth-child(2)
-                -webkit-animation-delay -0.75s
-                animation-delay -0.75s
+      .Preloader-loading-circle:nth-child(2) {
+        -webkit-animation-delay: -0.75s;
+                animation-delay: -0.75s; }
 
-        @keyframes scale
-          0%
-            -webkit-transform scale(0)
-            transform scale(0)
-            opacity 0
+      @keyframes scale {
+        0% {
+          -webkit-transform: scale(0);
+                  transform: scale(0);
+          opacity: 0; }
 
-          5%
-            opacity 1
+        5% { opacity: 1; }
 
-          100%
-            -webkit-transform scale(1)
-            transform scale(1)
-            opacity 0
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          opacity: 0; }
+      }
+
+      @-webkit-keyframes scale {
+        0% {
+          -webkit-transform: scale(0);
+                  transform: scale(0);
+          opacity: 0; }
+
+        5% { opacity: 1; }
+
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+          opacity: 0; }
+      }
 
     //- Stylesheets
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poiret+One")
