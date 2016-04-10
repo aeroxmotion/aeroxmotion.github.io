@@ -56,9 +56,9 @@ gulp.task('jade', function() {
   gulp.src(config.jade.src)
     .pipe(jade({
       pretty: true
-  }))
-  .pipe(gulp.dest(config.jade.dest))
-  .pipe(connect.reload());
+    }))
+    .pipe(gulp.dest(config.jade.dest))
+    .pipe(connect.reload());
 });
 
 gulp.task('watch', function() {
