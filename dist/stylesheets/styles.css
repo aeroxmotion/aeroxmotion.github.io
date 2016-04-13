@@ -177,3 +177,11 @@ a:hover {
   opacity: 1;
   visibility: visible;
 }
+::-moz-selection {
+  background-color: rgba(241,241,241,0.5);
+  color: #181818;
+}
+::selection {
+  background-color: rgba(241,241,241,0.5);
+  color: #181818;
+}
