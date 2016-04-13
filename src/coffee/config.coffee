@@ -17,11 +17,11 @@
 # Enable strict mode
 'use strict'
 
-### Simple selector ###
+# Simple selector
 $ = (selector) ->
   document.querySelector selector
 
-### Preloader ###
+# Preloader
 preloader = $ '#preloader'
 
 window.addEventListener 'load', ->

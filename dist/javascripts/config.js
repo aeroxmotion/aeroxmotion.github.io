@@ -17,16 +17,11 @@
 
 (function() {
   'use strict';
-
-  /* Simple selector */
   var $, preloader;
 
   $ = function(selector) {
     return document.querySelector(selector);
   };
-
-
-  /* Preloader */
 
   preloader = $('#preloader');
 
