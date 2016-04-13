@@ -30,7 +30,7 @@
   });
 
   preloader.addEventListener('transitionend', function() {
-    document.body.removeChild(this);
+    $('body').removeChild(this);
   });
 
 }).call(this);

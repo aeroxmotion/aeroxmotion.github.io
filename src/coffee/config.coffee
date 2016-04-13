@@ -29,5 +29,5 @@ window.addEventListener 'load', ->
   return
 
 preloader.addEventListener 'transitionend', ->
-  document.body.removeChild this
+  $('body').removeChild this
   return
