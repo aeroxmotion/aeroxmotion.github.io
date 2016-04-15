@@ -74,4 +74,11 @@ gulp.task('serve', function() {
   });
 });
 
-gulp.task('default', ['serve', 'images', 'coffee', 'stylus', 'jade', 'watch']);
+gulp.task('default', [
+  'serve',
+  'images',
+  'coffee',
+  'stylus',
+  'jade',
+  'watch'
+]);
