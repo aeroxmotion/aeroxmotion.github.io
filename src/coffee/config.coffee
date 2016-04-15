@@ -28,6 +28,7 @@ window.addEventListener 'load', ->
   preloader.classList.add 'is-hide'
   return
 
-preloader.addEventListener 'transitionend', ->
-  $('body').removeChild @
+preloader.addEventListener 'transitionend', (e) ->
+  if e.propertyName is 'visibility'
+    $('body').removeChild @
   return

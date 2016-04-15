@@ -29,8 +29,10 @@
     preloader.classList.add('is-hide');
   });
 
-  preloader.addEventListener('transitionend', function() {
-    $('body').removeChild(this);
+  preloader.addEventListener('transitionend', function(e) {
+    if (e.propertyName === 'visibility') {
+      $('body').removeChild(this);
+    }
   });
 
 }).call(this);
