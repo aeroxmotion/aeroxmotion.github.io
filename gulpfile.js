@@ -1,10 +1,10 @@
-var autoprefixer = require('autoprefixer-stylus'),
-    gulp         = require('gulp'),
-    tinypng      = require('gulp-tinypng'),
-    coffee       = require('gulp-coffee'),
-    stylus       = require('gulp-stylus'),
-    jade         = require('gulp-jade'),
-    connect      = require('gulp-connect');
+var autoprefixer = require('autoprefixer-stylus');
+var gulp = require('gulp');
+var tinypng = require('gulp-tinypng');
+var coffee = require('gulp-coffee');
+var stylus = require('gulp-stylus');
+var jade = require('gulp-jade');
+var connect = require('gulp-connect');
 
 var config = {
   images: {
