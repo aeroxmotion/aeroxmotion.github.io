@@ -149,13 +149,11 @@ a:hover {
   margin: 0 1em;
 }
 .SocialList-item-link {
+  position: relative;
   color: inherit;
   font-size: 1.2em;
 }
-.Tooltip {
-  position: relative;
-}
-.Tooltip:before {
+.SocialList-item-link:before {
   content: attr(data-title);
   position: absolute;
   bottom: -10px;
@@ -173,7 +171,7 @@ a:hover {
   visibility: hidden;
   transition: all 0.25s ease-in-out;
 }
-.Tooltip:hover:before {
+.SocialList-item-link:hover:before {
   opacity: 1;
   visibility: visible;
 }

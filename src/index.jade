@@ -115,7 +115,7 @@ html(lang="en")
         - socialLinks.email = { title: 'Contact me (business)', href: 'mailto:aeromotiondesign@gmail.com' }
         - each val, key in socialLinks
           li.SocialList-item
-            a.SocialList-item-link.Tooltip(data-title=val.title, href=val.href, target="_blank")
+            a.SocialList-item-link(data-title=val.title, href=val.href, target="_blank")
               i(class="icon icon-" + key)
 
     //- Javascripts
