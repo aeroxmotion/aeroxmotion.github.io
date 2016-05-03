@@ -2,7 +2,6 @@
   "name": "aeroxmotion.github.io",
   "version": "1.0.0",
   "description": "Official website",
-  "main": "index.html",
   "scripts": {
     "start": "npm install && gulp"
   },
