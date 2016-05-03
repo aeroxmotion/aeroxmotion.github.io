@@ -1,6 +1,7 @@
 {
   "name": "aeroxmotion.github.io",
   "version": "1.0.0",
+  "author": "AeroXMotion",
   "description": "Official website",
   "scripts": {
     "start": "npm install && gulp"
@@ -9,7 +10,6 @@
     "type": "git",
     "url": "https://github.com/aeroxmotion/aeroxmotion.github.io.git"
   },
-  "author": "AeroXMotion",
   "bugs": {
     "url": "https://github.com/aeroxmotion/aeroxmotion.github.io/issues"
   },
