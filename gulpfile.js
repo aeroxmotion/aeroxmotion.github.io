@@ -30,20 +30,20 @@ var config = {
   }
 };
 
-gulp.task('images', function() {
+gulp.task('images', () => {
   gulp.src(config.images.src)
     .pipe(tinypng(config.images.key))
     .pipe(gulp.dest(config.images.dest));
 });
 
-gulp.task('coffee', function() {
+gulp.task('coffee', () => {
   gulp.src(config.coffee.src)
    .pipe(coffee())
    .pipe(gulp.dest(config.coffee.dest))
    .pipe(connect.reload());
 });
 
-gulp.task('stylus', function() {
+gulp.task('stylus', () => {
   gulp.src(config.stylus.src)
     .pipe(stylus({
       use: [ autoprefixer('last 3 versions') ]
@@ -52,7 +52,7 @@ gulp.task('stylus', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('jade', function() {
+gulp.task('jade', () => {
   gulp.src(config.jade.src)
     .pipe(jade({
       pretty: true
@@ -61,13 +61,13 @@ gulp.task('jade', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', () => {
   gulp.watch(config.coffee.src, ['coffee']);
   gulp.watch(config.stylus.watch, ['stylus']);
   gulp.watch(config.jade.src, ['jade']);
 });
 
-gulp.task('serve', function() {
+gulp.task('serve', () => {
   connect.server({
     port: 1337,
     livereload: true
