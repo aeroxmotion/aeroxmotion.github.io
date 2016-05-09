@@ -114,9 +114,12 @@
     </main>
     <script>
       var preloader = document.querySelector('#preloader');
-      preloader.classList.add('is-hide');
-      preloader.addEventListener('transitionend', function() {
-        this.style.display = 'none';
+      window.addEventListener('load', function() {
+        preloader.classList.add('is-hide');
+      
+        preloader.addEventListener('transitionend', function() {
+          this.style.display = 'none';
+        });
       });
       
     </script>
