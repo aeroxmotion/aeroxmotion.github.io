@@ -1,7 +1,6 @@
 var autoprefixer = require('autoprefixer-stylus');
 var gulp = require('gulp');
 var tinypng = require('gulp-tinypng');
-var coffee = require('gulp-coffee');
 var stylus = require('gulp-stylus');
 var jade = require('gulp-jade');
 var connect = require('gulp-connect');
@@ -34,13 +33,6 @@ gulp.task('images', () => {
   gulp.src(config.images.src)
     .pipe(tinypng(config.images.key))
     .pipe(gulp.dest(config.images.dest));
-});
-
-gulp.task('coffee', () => {
-  gulp.src(config.coffee.src)
-   .pipe(coffee())
-   .pipe(gulp.dest(config.coffee.dest))
-   .pipe(connect.reload());
 });
 
 gulp.task('stylus', () => {
