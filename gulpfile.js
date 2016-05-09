@@ -2,6 +2,8 @@ var autoprefixer = require('autoprefixer-stylus');
 var gulp = require('gulp');
 var tinypng = require('gulp-tinypng');
 var stylus = require('gulp-stylus');
+var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
 var jade = require('gulp-jade');
 var connect = require('gulp-connect');
 
@@ -20,7 +22,10 @@ var config = {
   stylus: {
     src: './src/stylus/styles.styl',
     dest: './dist/stylesheets',
-    watch: './src/stylus/*.styl'
+    watch: './src/stylus/*.styl',
+    minify: {
+      src: './dist/stylesheets/styles.css'
+    }
   },
 
   jade: {
@@ -44,6 +49,15 @@ gulp.task('stylus', () => {
     .pipe(connect.reload());
 });
 
+gulp.task('minify', () => {
+  gulp.src(config.stylus.minify.src)
+    .pipe(cssmin())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(config.stylus.dest));
+});
+
 gulp.task('jade', () => {
   gulp.src(config.jade.src)
     .pipe(jade({
@@ -56,6 +70,7 @@ gulp.task('jade', () => {
 gulp.task('watch', () => {
   gulp.watch(config.coffee.src, ['coffee']);
   gulp.watch(config.stylus.watch, ['stylus']);
+  gulp.watch(config.stylus.minify.src, ['minify']);
   gulp.watch(config.jade.src, ['jade']);
 });
 
@@ -69,8 +84,8 @@ gulp.task('serve', () => {
 gulp.task('default', [
   'serve',
   'images',
-  'coffee',
   'stylus',
+  'minify',
   'jade',
   'watch'
 ]);
