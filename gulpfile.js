@@ -60,9 +60,7 @@ gulp.task('minify', () => {
 
 gulp.task('jade', () => {
   gulp.src(config.jade.src)
-    .pipe(jade({
-      pretty: true
-    }))
+    .pipe(jade())
     .pipe(gulp.dest(config.jade.dest))
     .pipe(connect.reload());
 });
