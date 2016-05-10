@@ -43,7 +43,7 @@ gulp.task('images', () => {
 gulp.task('stylus', () => {
   gulp.src(config.stylus.src)
     .pipe(stylus({
-      use: [ autoprefixer('last 3 versions') ]
+      use: autoprefixer('last 3 versions')
     }))
     .pipe(gulp.dest(config.stylus.dest))
     .pipe(connect.reload());
