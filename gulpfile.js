@@ -10,21 +10,16 @@ var connect = require('gulp-connect');
 var config = {
   images: {
     key: 'API_KEY',
-    src: './src/images/background.{jpg,jpeg}',
-    dest: './dist/images'
-  },
-
-  coffee: {
-    src: './src/coffee/config.coffee',
-    dest: './dist/javascripts'
+    src: './src/img/background.{jpg,jpeg}',
+    dest: './dist/img'
   },
 
   stylus: {
-    src: './src/stylus/styles.styl',
-    dest: './dist/stylesheets',
-    watch: './src/stylus/*.styl',
+    src: './src/styl/styles.styl',
+    dest: './dist/css',
+    watch: './src/styl/*.styl',
     minify: {
-      src: './dist/stylesheets/styles.css'
+      src: './dist/css/styles.css'
     }
   },
 
@@ -66,7 +61,6 @@ gulp.task('jade', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(config.coffee.src, ['coffee']);
   gulp.watch(config.stylus.watch, ['stylus']);
   gulp.watch(config.stylus.minify.src, ['minify']);
   gulp.watch(config.jade.src, ['jade']);
