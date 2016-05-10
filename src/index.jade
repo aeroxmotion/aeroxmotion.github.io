@@ -104,15 +104,16 @@ html(lang="en")
               i(class="icon icon-" + key)
 
     //- Hide preloader
-    script.
-      var preloader = document.querySelector('#preloader');
-      window.addEventListener('load', function() {
-        preloader.classList.add('is-hide');
+    script
+      :uglify-js
+        var preloader = document.querySelector('#preloader');
+        window.addEventListener('load', function() {
+          preloader.classList.add('is-hide');
 
-        preloader.addEventListener('transitionend', function() {
-          this.style.display = 'none';
+          preloader.addEventListener('transitionend', function() {
+            this.style.display = 'none';
+          });
         });
-      });
 
     //- Analytics
     script.
