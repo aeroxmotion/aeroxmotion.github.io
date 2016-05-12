@@ -104,7 +104,7 @@ html(lang="en")
         each val, key in socialLinks
           li.SocialList-item
             a.SocialList-item-link(data-title=val.title, href=val.href, target="_blank")
-              i(class="icon icon-#{n++}")
+              i(class="icon icon-" + key)
 
     //- Hide preloader
     script
