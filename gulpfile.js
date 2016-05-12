@@ -87,8 +87,6 @@ gulp.task('serve', () => {
 
 gulp.task('default', [
   'serve',
-  'favicon',
-  'images',
   'stylus',
   'minify',
   'jade',
