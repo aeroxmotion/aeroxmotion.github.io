@@ -7,9 +7,14 @@ var rename = require('gulp-rename');
 var jade = require('gulp-jade');
 var connect = require('gulp-connect');
 
-const TINYPNG_KEY = '';
+var TINYPNG_KEY = 'K0ttiEele_TPyG7ukO7eCCwXH1v7sU1D';
 
 var config = {
+  favicon: {
+    src: './src/favicon.png',
+    dest: './dist'
+  },
+
   images: {
     src: './src/img/background.{jpg,jpeg}',
     dest: './dist/img'
@@ -29,6 +34,12 @@ var config = {
     dest: './'
   }
 };
+
+gulp.task('favicon', () => {
+  gulp.src(config.favicon.src)
+    .pipe(tinypng(TINYPNG_KEY))
+    .pipe(gulp.dest(config.favicon.dest));
+});
 
 gulp.task('images', () => {
   gulp.src(config.images.src)
@@ -76,6 +87,7 @@ gulp.task('serve', () => {
 
 gulp.task('default', [
   'serve',
+  'favicon',
   'images',
   'stylus',
   'minify',
