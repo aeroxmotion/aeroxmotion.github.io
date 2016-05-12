@@ -4,7 +4,7 @@ var tinypng = require('gulp-tinypng');
 var stylus = require('gulp-stylus');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
-var jade = require('gulp-jade');
+var pug = require('gulp-pug');
 var connect = require('gulp-connect');
 
 var TINYPNG_KEY = 'API_KEY';
@@ -29,8 +29,8 @@ var config = {
     }
   },
 
-  jade: {
-    src: './src/index.jade',
+  pug: {
+    src: './src/index.pug',
     dest: './'
   }
 };
@@ -65,17 +65,17 @@ gulp.task('minify', () => {
     .pipe(gulp.dest(config.stylus.dest));
 });
 
-gulp.task('jade', () => {
-  gulp.src(config.jade.src)
-    .pipe(jade())
-    .pipe(gulp.dest(config.jade.dest))
+gulp.task('pug', () => {
+  gulp.src(config.pug.src)
+    .pipe(pug())
+    .pipe(gulp.dest(config.pug.dest))
     .pipe(connect.reload());
 });
 
 gulp.task('watch', () => {
   gulp.watch(config.stylus.watch, ['stylus']);
   gulp.watch(config.stylus.minify.src, ['minify']);
-  gulp.watch(config.jade.src, ['jade']);
+  gulp.watch(config.pug.src, ['pug']);
 });
 
 gulp.task('serve', () => {
@@ -89,6 +89,6 @@ gulp.task('default', [
   'serve',
   'stylus',
   'minify',
-  'jade',
+  'pug',
   'watch'
 ]);

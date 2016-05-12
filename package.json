@@ -24,9 +24,11 @@
     "gulp": "^3.9.1",
     "gulp-connect": "^3.2.2",
     "gulp-cssmin": "^0.1.7",
-    "gulp-jade": "^1.1.0",
+    "gulp-pug": "^3.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.3.1",
-    "gulp-tinypng": "^1.0.2"
+    "gulp-tinypng": "^1.0.2",
+    "jstransformer": "0.0.4",
+    "jstransformer-uglify-js": "^1.1.1"
   }
 }

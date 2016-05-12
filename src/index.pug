@@ -101,10 +101,10 @@ html(lang="en")
         - socialLinks.twitter = { title: 'Follow me on Twitter', href: 'https://twitter.com/aeromdesign' }
         - socialLinks.github = { title: 'See my projects on Github', href: 'https://github.com/aeroxmotion' }
         - socialLinks.email = { title: 'Contact me (business)', href: 'mailto:aeromotiondesign@gmail.com' }
-        - each val, key in socialLinks
+        each val, key in socialLinks
           li.SocialList-item
             a.SocialList-item-link(data-title=val.title, href=val.href, target="_blank")
-              i(class="icon icon-" + key)
+              i(class="icon icon-#{n++}")
 
     //- Hide preloader
     script
