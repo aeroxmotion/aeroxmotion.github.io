@@ -7,7 +7,7 @@ var rename = require('gulp-rename');
 var jade = require('gulp-jade');
 var connect = require('gulp-connect');
 
-var TINYPNG_KEY = 'K0ttiEele_TPyG7ukO7eCCwXH1v7sU1D';
+var TINYPNG_KEY = 'API_KEY';
 
 var config = {
   favicon: {
