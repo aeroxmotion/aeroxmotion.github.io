@@ -7,9 +7,10 @@ var rename = require('gulp-rename');
 var jade = require('gulp-jade');
 var connect = require('gulp-connect');
 
+const TINYPNG_KEY = '';
+
 var config = {
   images: {
-    key: 'API_KEY',
     src: './src/img/background.{jpg,jpeg}',
     dest: './dist/img'
   },
@@ -31,7 +32,7 @@ var config = {
 
 gulp.task('images', () => {
   gulp.src(config.images.src)
-    .pipe(tinypng(config.images.key))
+    .pipe(tinypng(TINYPNG_KEY))
     .pipe(gulp.dest(config.images.dest));
 });
 
