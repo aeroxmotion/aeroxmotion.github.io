@@ -40,7 +40,7 @@ html(lang="en")
           margin-left: -25px;
           margin-top: -25px; }
 
-        .Preloader-loading-circle {
+        .Preloader-loadingCircle {
           position: absolute;
           top: 0;
           right: 0;
@@ -51,7 +51,7 @@ html(lang="en")
           -webkit-animation: scale 1.5s ease-out infinite both;
                   animation: scale 1.5s ease-out infinite both; }
 
-        .Preloader-loading-circle:nth-child(2) {
+        .Preloader-loadingCircle:nth-child(2) {
           -webkit-animation-delay: -0.75s;
                   animation-delay: -0.75s; }
 
@@ -89,8 +89,8 @@ html(lang="en")
   body.Page
     .Preloader#preloader
       .Preloader-loading
-        .Preloader-loading-circle
-        .Preloader-loading-circle
+        .Preloader-loadingCircle
+        .Preloader-loadingCircle
 
     main.Profile
       h1.Profile-title Aero
@@ -104,7 +104,7 @@ html(lang="en")
         - socialLinks.email = { title: 'Contact me (business)', href: 'mailto:aeromotiondesign@gmail.com' }
         each val, key in socialLinks
           li.SocialList-item
-            a.SocialList-item-link(data-title=val.title, href=val.href, target="_blank")
+            a.SocialList-itemLink(data-title=val.title, href=val.href, target="_blank")
               i(class="icon icon-" + key)
 
     script

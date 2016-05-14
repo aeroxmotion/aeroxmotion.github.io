@@ -142,12 +142,12 @@ a:hover {
   display: inline-block;
   margin: 0 1em;
 }
-.SocialList-item-link {
+.SocialList-itemLink {
   position: relative;
   color: inherit;
   font-size: 1.2em;
 }
-.SocialList-item-link:before {
+.SocialList-itemLink:before {
   content: attr(data-title);
   position: absolute;
   bottom: -10px;
@@ -165,7 +165,7 @@ a:hover {
   visibility: hidden;
   transition: all 0.25s ease-in-out;
 }
-.SocialList-item-link:hover:before {
+.SocialList-itemLink:hover:before {
   opacity: 1;
   visibility: visible;
 }
