@@ -11,27 +11,27 @@ var TINYPNG_KEY = 'API_KEY';
 
 var config = {
   favicon: {
-    src: './src/favicon.png',
-    dest: './dist'
+    src: 'src/favicon.png',
+    dest: 'dist'
   },
 
   images: {
-    src: './src/img/background.{jpg,jpeg}',
-    dest: './dist/img'
+    src: 'src/img/background.{jpg,jpeg}',
+    dest: 'dist/img'
   },
 
   stylus: {
-    src: './src/styl/styles.styl',
-    dest: './dist/css',
-    watch: './src/styl/*.styl',
+    src: 'src/styl/styles.styl',
+    dest: 'dist/css',
+    watch: 'src/styl/*.styl',
     minify: {
-      src: './dist/css/styles.css'
+      src: 'dist/css/styles.css'
     }
   },
 
   pug: {
-    src: './src/index.pug',
-    dest: './'
+    src: 'src/index.pug',
+    dest: '.'
   }
 };
 
