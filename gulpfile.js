@@ -73,9 +73,4 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('default', [
-  'serve',
-  'stylus',
-  'pug',
-  'watch'
-]);
+gulp.task('default', ['serve', 'stylus', 'pug', 'watch']);
