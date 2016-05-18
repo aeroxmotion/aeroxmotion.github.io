@@ -23,10 +23,7 @@ var config = {
   stylus: {
     src: 'src/styl/styles.styl',
     dest: 'dist/css',
-    watch: 'src/styl/*.styl',
-    minify: {
-      src: 'dist/css/styles.css'
-    }
+    watch: 'src/styl/*.styl'
   },
 
   pug: {
@@ -65,7 +62,6 @@ gulp.task('pug', () => {
 
 gulp.task('watch', () => {
   gulp.watch(config.stylus.watch, ['stylus']);
-  gulp.watch(config.stylus.minify.src, ['minify']);
   gulp.watch(config.pug.src, ['pug']);
 });
 
