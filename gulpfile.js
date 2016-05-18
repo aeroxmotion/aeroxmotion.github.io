@@ -56,15 +56,6 @@ gulp.task('stylus', () => {
     .pipe(connect.reload());
 });
 
-gulp.task('minify', () => {
-  gulp.src(config.stylus.minify.src)
-    .pipe(cssmin())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest(config.stylus.dest));
-});
-
 gulp.task('pug', () => {
   gulp.src(config.pug.src)
     .pipe(pug())
@@ -88,7 +79,6 @@ gulp.task('serve', () => {
 gulp.task('default', [
   'serve',
   'stylus',
-  'minify',
   'pug',
   'watch'
 ]);
