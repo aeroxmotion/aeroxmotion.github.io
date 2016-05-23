@@ -59,16 +59,14 @@ gulp.task('pug', () => {
     .pipe(connect.reload());
 });
 
-gulp.task('watch', () => {
-  gulp.watch(config.stylus.watch, ['stylus']);
-  gulp.watch(config.pug.src, ['pug']);
-});
-
 gulp.task('serve', () => {
   connect.server({
     port: 1337,
     livereload: true
   });
+
+  gulp.watch(config.stylus.watch, ['stylus']);
+  gulp.watch(config.pug.src, ['pug']);
 });
 
-gulp.task('default', ['serve', 'stylus', 'pug', 'watch']);
+gulp.task('default', ['serve', 'stylus', 'pug']);
