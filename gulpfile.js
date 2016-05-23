@@ -2,8 +2,6 @@ var autoprefixer = require('autoprefixer-stylus');
 var gulp = require('gulp');
 var tinypng = require('gulp-tinypng');
 var stylus = require('gulp-stylus');
-var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
 var pug = require('gulp-pug');
 var connect = require('gulp-connect');
 
