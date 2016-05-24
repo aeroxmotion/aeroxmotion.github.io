@@ -1,17 +1,17 @@
 doctype html
-html(lang="en")
+html(lang='en')
   head
-    meta(charset="UTF-8")
+    meta(charset='UTF-8')
     title Aero Motion Design | Web development
-    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
 
     //- Favicon
-    link(rel="icon", type="image/png", href="dist/favicon.png")
+    link(rel='icon', type='image/png', href='dist/favicon.png')
 
     //- Metas
-    meta(name="author", content="AeroXMotion")
-    meta(name="description", content="Official website")
-    meta(name="keywords", content="Motion, Designer, Web, Development")
+    meta(name='author', content='AeroXMotion')
+    meta(name='description', content='Official website')
+    meta(name='keywords', content='Motion, Designer, Web, Development')
 
     //- Preloader
     style
@@ -84,8 +84,8 @@ html(lang="en")
         }
 
     //- Stylesheets
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poiret+One")
-    link(rel="stylesheet", href="dist/css/styles.css")
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Poiret+One')
+    link(rel='stylesheet', href='dist/css/styles.css')
   body.Page
     .Preloader#preloader
       .Preloader-loading
@@ -104,8 +104,8 @@ html(lang="en")
         - socialLinks.email = { title: 'Contact me (business)', href: 'mailto:aeromotiondesign@gmail.com' }
         each val, key in socialLinks
           li.SocialList-item
-            a.SocialList-itemLink(data-title=val.title, href=val.href, target="_blank")
-              i(class="icon icon-" + key)
+            a.SocialList-itemLink(data-title=val.title, href=val.href, target='_blank')
+              i(class='icon icon-' + key)
 
     script
       :uglify-js
