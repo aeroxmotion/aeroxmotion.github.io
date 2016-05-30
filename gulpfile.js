@@ -14,8 +14,6 @@ var connect = require('gulp-connect');
  * App and path configurations
  */
 
-var TINYPNG_KEY = 'API_KEY';
-
 var config = {
   favicon: {
     src: 'src/favicon.png',
@@ -46,13 +44,13 @@ var config = {
 
 gulp.task('favicon', () => {
   gulp.src(config.favicon.src)
-    .pipe(tinypng(TINYPNG_KEY))
+    .pipe(tinypng(process.env.TINYPNG_KEY))
     .pipe(gulp.dest(config.favicon.dest));
 });
 
 gulp.task('images', () => {
   gulp.src(config.images.src)
-    .pipe(tinypng(TINYPNG_KEY))
+    .pipe(tinypng(process.env.TINYPNG_KEY))
     .pipe(gulp.dest(config.images.dest));
 });
 
