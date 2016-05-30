@@ -1,9 +1,18 @@
+/**
+ * Module dependencies
+ */
+
 var autoprefixer = require('autoprefixer-stylus');
 var gulp = require('gulp');
 var tinypng = require('gulp-tinypng');
 var stylus = require('gulp-stylus');
 var pug = require('gulp-pug');
 var connect = require('gulp-connect');
+
+
+/**
+ * App and path configurations
+ */
 
 var TINYPNG_KEY = 'API_KEY';
 
@@ -30,6 +39,11 @@ var config = {
   }
 };
 
+
+/**
+ * Images task
+ */
+
 gulp.task('favicon', () => {
   gulp.src(config.favicon.src)
     .pipe(tinypng(TINYPNG_KEY))
@@ -42,6 +56,11 @@ gulp.task('images', () => {
     .pipe(gulp.dest(config.images.dest));
 });
 
+
+/**
+ * Stylus task
+ */
+
 gulp.task('stylus', () => {
   gulp.src(config.stylus.src)
     .pipe(stylus({
@@ -52,12 +71,22 @@ gulp.task('stylus', () => {
     .pipe(connect.reload());
 });
 
+
+/**
+ * Pug task
+ */
+
 gulp.task('pug', () => {
   gulp.src(config.pug.src)
     .pipe(pug())
     .pipe(gulp.dest(config.pug.dest))
     .pipe(connect.reload());
 });
+
+
+/**
+ * Serve task
+ */
 
 gulp.task('serve', () => {
   connect.server({
@@ -68,5 +97,10 @@ gulp.task('serve', () => {
   gulp.watch(config.stylus.watch, ['stylus']);
   gulp.watch(config.pug.src, ['pug']);
 });
+
+
+/**
+ * Default task
+ */
 
 gulp.task('default', ['serve', 'stylus', 'pug']);
