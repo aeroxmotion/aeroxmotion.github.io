@@ -104,7 +104,7 @@ html(lang='en')
         - socialLinks.email = { title: 'Contact me (business)', href: 'mailto:aeromotiondesign@gmail.com' }
         each val, key in socialLinks
           li.SocialList-item
-            a.SocialList-itemLink(data-title=val.title, href=val.href, target='_blank')
+            a.SocialList-itemLink(data-tooltip=val.title, href=val.href, target='_blank')
               i(class='icon icon-' + key)
 
     script
