@@ -27,6 +27,7 @@ var config = {
 
   stylus: {
     src: 'src/styl/styles.styl',
+    support: 'last 3 versions',
     dest: 'dist/css',
     watch: 'src/styl/*.styl'
   },
@@ -62,7 +63,7 @@ gulp.task('images', () => {
 gulp.task('stylus', () => {
   gulp.src(config.stylus.src)
     .pipe(stylus({
-      use: autoprefixer('last 3 versions'),
+      use: autoprefixer(config.stylus.support),
       compress: true
     }))
     .pipe(gulp.dest(config.stylus.dest))
