@@ -16,7 +16,7 @@ html(lang='en')
     //- Preloader
     style
       :clean-css
-        .Preloader {
+        .preloader {
           position: fixed;
           top: 0;
           right: 0;
@@ -27,11 +27,11 @@ html(lang='en')
           -webkit-transition: all .5s linear;
                   transition: all .5s linear; }
 
-        .Preloader.is-hide {
+        .preloader.is-hide {
           opacity: 0;
           visibility: hidden; }
 
-        .Preloader-loading {
+        .preloader__loading {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -40,7 +40,7 @@ html(lang='en')
           margin-left: -25px;
           margin-top: -25px; }
 
-        .Preloader-loadingCircle {
+        .preloader__loading-circle {
           position: absolute;
           top: 0;
           right: 0;
@@ -51,7 +51,7 @@ html(lang='en')
           -webkit-animation: scale 1.5s ease-out infinite both;
                   animation: scale 1.5s ease-out infinite both; }
 
-        .Preloader-loadingCircle:nth-child(2) {
+        .preloader__loading-circle:nth-child(2) {
           -webkit-animation-delay: -0.75s;
                   animation-delay: -0.75s; }
 
@@ -86,25 +86,25 @@ html(lang='en')
     //- Stylesheets
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Poiret+One')
     link(rel='stylesheet', href='dist/css/styles.css')
-  body.Page
-    .Preloader#preloader
-      .Preloader-loading
-        .Preloader-loadingCircle
-        .Preloader-loadingCircle
+  body.page
+    .preloader#preloader
+      .preloader__loading
+        .preloader__loading-circle
+        .preloader__loading-circle
 
-    main.Profile
-      h1.Profile-title Aero
-      h2.Profile-subtitle Motion Design
-      p.Profile-description Web development
-      ul.SocialList
+    main.profile
+      h1.profile__title Aero
+      h2.profile__subtitle Motion Design
+      p.profile__description Web development
+      ul.social-list
         - var socialLinks = {}
         - socialLinks.facebook = { title: 'Like me on Facebook', href: 'https://www.facebook.com/aeromotiondesign' }
         - socialLinks.twitter = { title: 'Follow me on Twitter', href: 'https://twitter.com/aeromdesign' }
         - socialLinks.github = { title: 'See my projects on Github', href: 'https://github.com/aeroxmotion' }
         - socialLinks.email = { title: 'Contact me (business)', href: 'mailto:aeromotiondesign@gmail.com' }
         each val, key in socialLinks
-          li.SocialList-item
-            a.SocialList-itemLink(data-tooltip=val.title, href=val.href, target='_blank')
+          li.social-list__item
+            a.social-list__item-link(data-tooltip=val.title, href=val.href, target='_blank')
               i(class='icon icon-' + key)
 
     script
