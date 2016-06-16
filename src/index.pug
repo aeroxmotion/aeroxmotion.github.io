@@ -112,9 +112,9 @@ html(lang='en')
     script
       :uglify-js
         //- Hide preloader
-        var preloader = document.querySelector('#preloader');
+        var pl = document.querySelector('#preloader');
         window.addEventListener('load', function() {
-          preloader.classList.add('is-hide');
+          pl.classList.add('is-hide');
         });
 
         //- Analytics
