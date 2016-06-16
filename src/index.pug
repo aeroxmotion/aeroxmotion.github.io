@@ -113,10 +113,6 @@ html(lang='en')
         var preloader = document.querySelector('#preloader');
         window.addEventListener('load', function() {
           preloader.classList.add('is-hide');
-
-          preloader.addEventListener('transitionend', function() {
-            this.style.display = 'none';
-          });
         });
 
         //- Analytics
