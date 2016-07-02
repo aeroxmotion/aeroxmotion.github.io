@@ -1,5 +1,8 @@
-# Aero Motion Design
-## Web development
+Aero Motion Design
+==================
+
+Web development
+---------------
 
 Official website
 
