@@ -3,96 +3,96 @@
 @import '_variables'
 
 .page
-  display flex
-  justify-content center
-  align-items center
-  height 100vh
-  background #111 url($background-image-url) no-repeat center / cover
-  color #fff
-  font-family 'Poiret One', Arial, Helvetica, sans-serif
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  background: #111 url($background-image-url) no-repeat center / cover
+  color: #fff
+  font-family: 'Poiret One', Arial, Helvetica, sans-serif
 
   @media only screen and (max-width: 1024px)
-    font-size 12px
+    font-size: 12px
 
   @media only screen and (min-width: 1025px) and (max-width: 1440px)
-    font-size 14px
+    font-size: 14px
 
   &:before
-    content ''
-    position fixed
-    top 0
-    right 0
-    bottom 0
-    left 0
-    background rgba(#282828, .7)
+    content: ''
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: rgba(#282828, .7)
 
 .profile
-  position relative
-  text-align center
+  position: relative
+  text-align: center
 
   &__title
   &__subtitle
-    line-height 1
-    text-transform uppercase
+    line-height: 1
+    text-transform: uppercase
 
   &__title
-    margin-bottom .1em
-    font-size 6.5em
-    font-weight 100
+    margin-bottom: .1em
+    font-size: 6.5em
+    font-weight: 100
 
   &__subtitle
-    position relative
-    font-size 1.3em
-    font-weight 300
-    letter-spacing .4em
-    white-space nowrap
+    position: relative
+    font-size: 1.3em
+    font-weight: 300
+    letter-spacing: .4em
+    white-space: nowrap
 
     &:after
-      content ''
-      position absolute
-      left 15%
-      bottom -.75em
-      width 70%
-      height 1px
-      background #fff
+      content: ''
+      position: absolute
+      left: 15%
+      bottom: -.75em
+      width: 70%
+      height: 1px
+      background: #fff
 
   &__description
-    margin-top 2em
-    font-size 1.1em
-    letter-spacing 1px
+    margin-top: 2em
+    font-size: 1.1em
+    letter-spacing: 1px
 
 .social-list
-  margin-top 2em
+  margin-top: 2em
 
   &__item
-    display inline-block
-    margin 0 1em
+    display: inline-block
+    margin: 0 1em
 
     &-link
-      position relative
-      color inherit
-      font-size 1.2em
+      position: relative
+      color: inherit
+      font-size: 1.2em
 
       &:after
-        content attr(data-tooltip)
-        position absolute
-        bottom -10px
-        left 50%
-        transform translate(-50%, 100%)
-        padding .7em
-        background-color rgba(#282828, .8)
-        font-size .8em
-        white-space nowrap
-        letter-spacing 0
-        opacity 0
-        visibility hidden
-        transition all .25s ease-in-out
+        content: attr(data-tooltip)
+        position: absolute
+        bottom: -10px
+        left: 50%
+        transform: translate(-50%, 100%)
+        padding: .7em
+        background-color: rgba(#282828, .8)
+        font-size: .8em
+        white-space: nowrap
+        letter-spacing: 0
+        opacity: 0
+        visibility: hidden
+        transition: all .25s ease-in-out
 
       &:hover
         &:after
-          opacity 1
-          visibility visible
+          opacity: 1
+          visibility: visible
 
 ::selection
-  background-color rgba(#f1f1f1, .5)
-  color #181818
+  background-color: rgba(#f1f1f1, .5)
+  color: #181818
