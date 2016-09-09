@@ -63,7 +63,6 @@ gulp.task('stylus', () => {
     .pipe(connect.reload())
 })
 
-
 /**
  * Pug task
  */
@@ -73,7 +72,6 @@ gulp.task('pug', () => {
     .pipe(gulp.dest(config.pug.dest))
     .pipe(connect.reload())
 })
-
 
 /**
  * Serve task
@@ -87,7 +85,6 @@ gulp.task('serve', () => {
   gulp.watch(config.stylus.watch, ['stylus'])
   gulp.watch(config.pug.src, ['pug'])
 })
-
 
 /**
  * Default task
