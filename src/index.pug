@@ -111,8 +111,11 @@ html(lang='en')
     script
       :uglify-js
         //- Hide preloader
-        var pl = document.querySelector('#preloader');
-        window.addEventListener('load', function() { pl.classList.add('is-hide'); });
+        var pl = document.querySelector('#preloader')
+
+        window.onload = function() {
+          pl.classList.add('is-hide')
+        }
 
         //- Analytics
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
