@@ -72,7 +72,9 @@ gulp.task('pug', () => {
   gulp.src(config.pug.src)
     .pipe(pug())
     .pipe(gulp.dest(config.pug.dest))
-    .pipe(browserSync.stream({ once: true }))
+    .pipe(browserSync.stream({
+      once: true
+    }))
 })
 
 /**
