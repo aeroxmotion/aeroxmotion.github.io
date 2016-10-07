@@ -33,7 +33,7 @@ const config = {
 
   pug: {
     src: 'src/index.pug',
-    dest: '.'
+    dest: './'
   }
 }
 
