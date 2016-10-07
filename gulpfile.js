@@ -1,17 +1,17 @@
 /**
  * Module dependencies
  */
-var autoprefixer = require('autoprefixer-stylus')
-var gulp = require('gulp')
-var tinypng = require('gulp-tinypng')
-var stylus = require('gulp-stylus')
-var pug = require('gulp-pug')
-var browserSync = require('browser-sync').create()
+const autoprefixer = require('autoprefixer-stylus')
+const gulp = require('gulp')
+const tinypng = require('gulp-tinypng')
+const stylus = require('gulp-stylus')
+const pug = require('gulp-pug')
+const browserSync = require('browser-sync').create()
 
 /**
  * App and path configurations
  */
-var config = {
+const config = {
   favicon: {
     src: 'src/favicon.png',
     dest: 'dist'
