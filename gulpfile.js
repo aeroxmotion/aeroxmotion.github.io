@@ -16,18 +16,18 @@ const browserSync = require('browser-sync').create()
 const config = {
   favicon: {
     src: 'src/favicon.png',
-    dest: 'dist'
+    dest: 'dist/'
   },
 
   images: {
     src: 'src/img/background.{jpg,jpeg}',
-    dest: 'dist/img'
+    dest: 'dist/img/'
   },
 
   stylus: {
     src: 'src/styl/styles.styl',
     support: 'last 3 versions',
-    dest: 'dist/css',
+    dest: 'dist/css/',
     watch: 'src/styl/*.styl'
   },
 
