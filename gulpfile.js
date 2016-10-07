@@ -6,7 +6,7 @@ var gulp = require('gulp')
 var tinypng = require('gulp-tinypng')
 var stylus = require('gulp-stylus')
 var pug = require('gulp-pug')
-var connect = require('gulp-connect')
+var browserSync = require('browser-sync').create()
 
 /**
  * App and path configurations
@@ -60,7 +60,7 @@ gulp.task('stylus', () => {
       compress: true
     }))
     .pipe(gulp.dest(config.stylus.dest))
-    .pipe(connect.reload())
+    .pipe(browserSync.stream())
 })
 
 /**
@@ -70,16 +70,16 @@ gulp.task('pug', () => {
   gulp.src(config.pug.src)
     .pipe(pug())
     .pipe(gulp.dest(config.pug.dest))
-    .pipe(connect.reload())
+    .pipe(browserSync.stream({ once: true }))
 })
 
 /**
  * Serve task
  */
 gulp.task('serve', () => {
-  connect.server({
-    port: 1337,
-    livereload: true
+  browserSync.init({
+    server: true,
+    port: 1337
   })
 
   gulp.watch(config.stylus.watch, ['stylus'])
