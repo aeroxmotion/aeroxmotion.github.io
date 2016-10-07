@@ -7,9 +7,9 @@
   <p>My personal website</p>
 
   <p>
-    <a href="https://www.facebook.com/aeromotiondesign">Like me on facebook</a> |
-    <a hreF="https://twitter.com/aeromdesign">Follow me on twitter</a> |
-    <a href="mailto:aeromotiondesign@gmail.com">Contact me (business)</a>
+    <a href="https://www.facebook.com/aeromotiondesign">Facebook</a> |
+    <a hreF="https://twitter.com/aeromdesign">Twitter</a> |
+    <a href="mailto:aeromotiondesign@gmail.com">Email</a>
   </p>
 
 </div>
