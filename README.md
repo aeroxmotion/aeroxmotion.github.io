@@ -1,11 +1,15 @@
-Aero Motion Design
-==================
+<div align="center">
 
-Web development
----------------
+  <h1>Aero Motion Design</h1>
 
-My personal website
+  <h2>Web development</h2>
 
-[Like me on facebook](https://www.facebook.com/aeromotiondesign) |
-[Follow me on twitter](https://twitter.com/aeromdesign) |
-[Contact me (business)](mailto:aeromotiondesign@gmail.com)
+  <p>My personal website</p>
+
+  <p>
+    <a href="https://www.facebook.com/aeromotiondesign">Like me on facebook</a> |
+    <a hreF="https://twitter.com/aeromdesign">Follow me on twitter</a> |
+    <a href="mailto:aeromotiondesign@gmail.com">Contact me (business)</a>
+  </p>
+
+</div>
