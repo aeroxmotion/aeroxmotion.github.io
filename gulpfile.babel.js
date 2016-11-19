@@ -1,14 +1,11 @@
-'use strict'
+import autoprefixer from 'autoprefixer-stylus'
+import gulp from 'gulp'
+import tinypng from 'gulp-tinypng'
+import stylus from 'gulp-stylus'
+import pug from 'gulp-pug'
+import browserSync from 'browser-sync'
 
-/**
- * Module dependencies
- */
-const autoprefixer = require('autoprefixer-stylus')
-const gulp = require('gulp')
-const tinypng = require('gulp-tinypng')
-const stylus = require('gulp-stylus')
-const pug = require('gulp-pug')
-const browserSync = require('browser-sync').create()
+const server = browserSync.create()
 
 /**
  * App and path configurations
@@ -62,7 +59,7 @@ gulp.task('stylus', () => {
       compress: true
     }))
     .pipe(gulp.dest(config.stylus.dest))
-    .pipe(browserSync.stream())
+    .pipe(server.stream())
 })
 
 /**
@@ -72,7 +69,7 @@ gulp.task('pug', () => {
   gulp.src(config.pug.src)
     .pipe(pug())
     .pipe(gulp.dest(config.pug.dest))
-    .pipe(browserSync.stream({
+    .pipe(server.stream({
       once: true
     }))
 })
@@ -81,7 +78,7 @@ gulp.task('pug', () => {
  * Serve task
  */
 gulp.task('serve', () => {
-  browserSync.init({
+  server.init({
     server: true,
     port: 1337
   })
