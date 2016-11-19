@@ -99,13 +99,13 @@ html(lang='en')
       p.profile__description Web development
       ul.social-list
         - var socialLinks = {}
-        - socialLinks.facebook = { title: 'Facebook', href: 'https://www.facebook.com/aeromotiondesign' }
-        - socialLinks.twitter = { title: 'Twitter', href: 'https://twitter.com/aeromdesign' }
-        - socialLinks.github = { title: 'Github', href: 'https://github.com/aeroxmotion' }
-        - socialLinks.email = { title: 'Email', href: 'mailto:aeroxmotion@hotmail.com' }
+        - socialLinks.facebook = 'https://www.facebook.com/aeromotiondesign'
+        - socialLinks.twitter = 'https://twitter.com/aeromdesign'
+        - socialLinks.github = 'https://github.com/aeroxmotion'
+        - socialLinks.email = 'mailto:aeroxmotion@hotmail.com'
         each info, network in socialLinks
           li.social-list__item
-            a.social-list__item-link(data-tooltip=info.title, href=info.href, target='_blank')
+            a.social-list__item-link(data-tooltip=network.replace(/^[a-z]/, l => l.toUpperCase()), href=info.href, target='_blank')
               i(class='icon icon-' + network)
 
     script
