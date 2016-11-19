@@ -106,7 +106,7 @@ html(lang='en')
         each href, network in socialLinks
           li.social-list__item
             a.social-list__item-link(data-tooltip=network.replace(/^[a-z]/, l => l.toUpperCase()), href=href, target='_blank')
-              i(class='icon icon-' + network)
+              i(class=`icon icon-${network}`)
 
     script
       :uglify-js
