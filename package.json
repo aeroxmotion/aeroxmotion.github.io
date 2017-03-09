@@ -30,6 +30,6 @@
     "gulp-tinypng": "^1.0.2",
     "jstransformer": "^1.0.0",
     "jstransformer-clean-css": "^2.0.0",
-    "jstransformer-uglify-js": "^1.1.1"
+    "jstransformer-uglify-js": "^1.2.0"
   }
 }
